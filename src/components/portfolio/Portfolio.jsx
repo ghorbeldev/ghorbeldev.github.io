@@ -11,6 +11,26 @@ import { Pagination, Navigation } from 'swiper';
 import { AiFillGithub } from 'react-icons/ai';
 import { BsCodeSlash } from 'react-icons/bs';
 import { fadeDown } from '../../configs/framerVariants';
+
+const getScreenshotUrl = (demoURL, fallbackImg) => {
+	if (!demoURL) return fallbackImg;
+
+	const params = new URLSearchParams({
+		url: demoURL,
+		screenshot: true,
+		meta: false,
+		embed: 'screenshot.url',
+		colorScheme: 'dark',
+		waitForTimeout: 3000,
+		waitUntil: 'networkidle0',
+		width: 1920,
+		height: 1080,
+		orientation: 'landscape',
+	});
+
+	return `https://api.microlink.io/?${params.toString()}`;
+};
+
 const Portfolio = () => {
 	return (
 		<motion.div
@@ -37,15 +57,23 @@ const Portfolio = () => {
 						}}
 						loop={true}
 						slidesPerView={1}
-						spaceBetween={0}
+						spaceBetween={20}
 						breakpoints={{
-							992: {
-								slidesPerView: 2,
-								spaceBetween: 0,
+							576: {
+								slidesPerView: 1.5,
+								spaceBetween: 20,
 							},
-							1200: {
+							768: {
+								slidesPerView: 2,
+								spaceBetween: 20,
+							},
+							992: {
+								slidesPerView: 2.5,
+								spaceBetween: 20,
+							},
+							1400: {
 								slidesPerView: 3,
-								spaceBetween: 0,
+								spaceBetween: 20,
 							},
 						}}
 						navigation={true}
@@ -57,7 +85,10 @@ const Portfolio = () => {
 									className='portfolio__content--card'
 								>
 									<div className='portfolio__content--card--img'>
-										<img src={project.img} alt={project.title} />
+										<img
+											src={getScreenshotUrl(project.demoURL, project.img)}
+											alt={project.title}
+										/>
 									</div>
 									<h3>{project.title}</h3>
 									<div className='focus-content'>
@@ -67,15 +98,17 @@ const Portfolio = () => {
 											))}
 										</ul>
 										<div className='links'>
-											<a
-												className='link'
-												href={project.repoURL}
-												target='_blank'
-												rel='noreferrer'
-											>
-												<AiFillGithub />
-												<span>Git</span>
-											</a>
+											{project.repoURL && (
+												<a
+													className='link'
+													href={project.repoURL}
+													target='_blank'
+													rel='noreferrer'
+												>
+													<AiFillGithub />
+													<span>Git</span>
+												</a>
+											)}
 											{project.demoURL && (
 												<a
 													className='link'

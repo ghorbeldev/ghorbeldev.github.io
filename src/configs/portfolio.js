@@ -1,13 +1,16 @@
 const portfolio = [
 	{
-		title: 'Movies DB',
-		description: [
-			'ReactJS',
-			'React modules like axios, react-router, swipper',
-			'Sass',
-		],
+		title: 'Tunimode',
+		description: ['NextJS', 'Tailwind', 'MongoDB'],
 		img: process.env.PUBLIC_URL + '/assets/images/movies.webp',
-		demoURL: 'https://frosty-bose-a43397.netlify.app/',
+		demoURL: 'https://tunimode.vercel.app/',
+		// repoURL: 'https://github.com/ghorbeldev/tunimode',
+	},
+	{
+		title: 'Movies DB',
+		description: ['ReactJS', 'Sass'],
+		img: process.env.PUBLIC_URL + '/assets/images/movies.webp',
+		demoURL: 'https://enchanting-jelly-146311.netlify.app/',
 		repoURL: 'https://github.com/ghorbeldev/movies-db-react-app',
 	},
 	{
@@ -40,17 +43,17 @@ const portfolio = [
 		demoURL: 'https://ghorbeldev.github.io/kasper-template/',
 		repoURL: 'https://github.com/ghorbeldev/kasper-template',
 	},
-	{
-		title: 'Ecommerce Admin Dashboard',
-		description: [
-			'ReactJS',
-			'Sass',
-			'React Modules Like Chart.js && react-router',
-		],
-		img: process.env.PUBLIC_URL + '/assets/images/dashboard.webp',
-		demoURL: 'https://heuristic-curran-24b189.netlify.app/',
-		repoURL: 'https://github.com/ghorbeldev/react-ecommerce-dashboard',
-	},
+	// {
+	// 	title: 'Ecommerce Admin Dashboard',
+	// 	description: [
+	// 		'ReactJS',
+	// 		'Sass',
+	// 		'React Modules Like Chart.js && react-router',
+	// 	],
+	// 	img: process.env.PUBLIC_URL + '/assets/images/dashboard.webp',
+	// 	demoURL: 'https://heuristic-curran-24b189.netlify.app/',
+	// 	repoURL: 'https://github.com/ghorbeldev/react-ecommerce-dashboard',
+	// },
 	{
 		title: 'Leon Template',
 		description: ['HTML5', 'CSS3', 'JavaScript'],
