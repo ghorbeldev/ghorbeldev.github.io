@@ -4,7 +4,7 @@ import Programming from '../../svg/Programming';
 import { fadeDown, letter, sentence } from '../../configs/framerVariants';
 import './about.scss';
 const aboutText =
-	"I'm a Passionate Programmer From Tunisia, Working as a Front End Developer";
+	"Software Engineer based in Tunisia. Driven by clean code, efficient systems, and modern technology.";
 const About = () => {
 	return (
 		<motion.div
