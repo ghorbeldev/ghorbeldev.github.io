@@ -42,10 +42,10 @@ const Hero = () => {
 							<span className='text-primary'>Adem Ghorbel</span>.
 						</motion.div>
 						<motion.div variants={fadeDown} className='line'>
-							I'm a Front end
+							I'm a Software
 						</motion.div>
 						<motion.div variants={fadeDown} className='line'>
-							Developer
+							Engineer
 						</motion.div>
 					</div>
 					{/* <p>
